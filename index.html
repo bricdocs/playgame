@@ -9,12 +9,26 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
 //gowebapp();	
-$.getJSON("link/to/json/Quotes.json", name);	
-	function gowebapp(){
+//$.getJSON("link/to/json/Quotes.json", name);
+	
+//GO TO WEB APP (0)
+function goWebApp(){
 	window.location.replace(
-		"https://script.google.com/macros/s/AKfycbw86ziO5qNRst7SQCtS2d73e4gebEe1Y-E8h3anu9_U6MZ_G9OyZKgZpPkK-QKUYN5h/exec",
+  	"https://script.google.com/macros/s/AKfycbwo-iwgOtcbTASvW34uJzPiwreZ66_jpfMGLaJgklgtq80_K8MuNsUv8EDs6ukAaA2V/exec",
 	);
-	}
+}
+//GO TO NO ADDON (1)	
+function goNoAddOn(){
+	window.location.replace(
+  	"https://script.google.com/macros/s/AKfycbw86ziO5qNRst7SQCtS2d73e4gebEe1Y-E8h3anu9_U6MZ_G9OyZKgZpPkK-QKUYN5h/exec",
+	);
+}
+//GO TO TEK (2)	
+function goTek(){
+	window.location.replace(
+  	"https://script.google.com/macros/s/AKfycbyZZmixisRqBb-x-XGrj7uuZDKPhf_nnp9HzZpCyz1rvRkni6ZFA2PoTN8mIXkKdWWF/exec",
+	);
+}
 </script>
 
 </head>
@@ -25,7 +39,7 @@ $.getJSON("link/to/json/Quotes.json", name);
 	<div class="d-grid gap-2 col-8 mx-auto mt-5">
 	  <button class="btn btn-primary mt-5" type="button" onClick="gowebapp();">WEBAPP</button>
 	  <button class="btn btn-secondary mt-5" type="button" onClick="gowebapp();">NO ADDON</button>
-	  <button class="btn btn-secondary mt-5" type="button" onClick="gowebapp();">TEK</button>
+	  <button class="btn btn-warning mt-5" type="button" onClick="gowebapp();">TEK</button>
 	</div>
 </container>
 </body>
