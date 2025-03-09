@@ -9,7 +9,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
 	function gowebapp(){
-	window.location.replace("https://script.google.com/macros/s/AKfycbw86ziO5qNRst7SQCtS2d73e4gebEe1Y-E8h3anu9_U6MZ_G9OyZKgZpPkK-QKUYN5h/exec",
+	window.location.replace(
+		"https://script.google.com/macros/s/AKfycbw86ziO5qNRst7SQCtS2d73e4gebEe1Y-E8h3anu9_U6MZ_G9OyZKgZpPkK-QKUYN5h/exec",
 	);
 	}
 </script>
@@ -17,10 +18,12 @@
 </head>
 
 <body>
-<div class="d-grid gap-2 col-4 mx-auto">
-  <button class="btn btn-primary" type="WEBAPP" onClick="gowebapp();">Button</button>
-  <button class="btn btn-secondary" type="NO ADDON">Button</button>
-</div>
+<container>
+	<div class="d-grid gap-2 col-4 mx-auto">
+	  <button class="btn btn-primary" type="WEBAPP" onClick="gowebapp();">Button</button>
+	  <button class="btn btn-secondary" type="NO ADDON">Button</button>
+	</div>
+</container>
 </body>
 
 </html>
