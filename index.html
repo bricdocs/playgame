@@ -10,6 +10,12 @@
 <script>
 //gowebapp();	
 //$.getJSON("link/to/json/Quotes.json", name);
+
+function pullJSON() {  
+  var URL = "https://script.google.com/macros/s/AKfycbx-fw7DtK_Jto2qeLCKUqdZkzIfM4DYVRH0lsNdBHcqFxoL_XVWMKQ0_3mQVDBZDjLb/exec"
+ var data = UrlFetchApp.fetch(URL, {"contentType": "application/json"});
+  Logger.log(Number(data));
+}
 	
 //GO TO WEB APP (0)
 function goWebApp(){
