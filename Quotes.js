@@ -2,7 +2,7 @@
     {
         "name" : "Chris Christie",
         "quote": "I closed the bridge!",
-        "date" : "February 1, 2014",
+        "date" : "February 1, 2015",
         "link" : "https://somelinktosomewhere.com"
     },
     {
