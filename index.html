@@ -7,12 +7,8 @@
    
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 <script>
-	
-//gowebapp();	
-//$.getJSON("link/to/json/Quotes.json", name);
-
-
 
 //GO TO WEB APP (0)
 function goWebApp(){
@@ -37,16 +33,16 @@ function goTek(){
 </head>
 
 <body>
-<p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>	
+
 <container>
 	<h1 class="text-center mt-3">BRICDOCS</h1>
 	<div class="d-grid gap-2 col-8 mx-auto mt-5">
 	  <button id="btn0" disabled class="btn btn-danger mt-5 fs-3" type="button" onClick="goWebApp();">WEB APP</button>
-	  <button class="btn btn-primary mt-5 fs-3" type="button" onClick="goNoAddOn();">NO ADDON</button>
-	  <button class="btn btn-warning mt-5 fs-3" type="button" onClick="goTek();">TEK</button>
+	  <button id="btn1" disabled class="btn btn-primary mt-5 fs-3" type="button" onClick="goNoAddOn();">NO ADDON</button>
+	  <button id="btn2" disabled class="btn btn-warning mt-5 fs-3" type="button" onClick="goTek();">TEK</button>
 	</div>
-	<div id="dene"></div>
-	<h1 id="demo"></h1>
+	<div id="datajson"></div>
+	
 </container>
 <script>
 
