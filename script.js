@@ -7,11 +7,27 @@ async function getJson() {
 		const response = await fetch(Url);
 		const data = await response.json();
 		console.log(data);
+		
 		if(data[0][0] == 0){
 			document.getElementById("btn0").disabled = false;
 		}
+		
+		if(data[0][0] == 1){
+			document.getElementById("btn0").disabled = false;
+		}
+		
+		if(data[0][0] == 2){
+			document.getElementById("btn0").disabled = false;
+		}
+
+		if(data[0][0] == 3){
+			document.getElementById("btn0").disabled = false;
+			document.getElementById("btn1").disabled = false;
+			document.getElementById("btn2").disabled = false;
+		}
+		
 	} catch (error) {
-		console.log(error);
+			console.log(error);
 	}
 }
 
