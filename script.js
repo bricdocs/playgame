@@ -12,21 +12,22 @@ async function getJson() {
 		console.log(data[0][0]);
 		
 		if(data[0][0] == 0){
-			document.getElementById("btn0").disabled = false;
+			document.getElementById("btn0").removeAttribute("hidden");
+			//document.getElementById("btn0").disabled = false;
 		}
 		
 		if(data[0][0] == 1){
-			document.getElementById("btn1").disabled = false;
+			document.getElementById("btn1").removeAttribute("hidden");
 		}
 		
 		if(data[0][0] == 2){
-			document.getElementById("btn2").disabled = false;
+			document.getElementById("btn2").removeAttribute("hidden");
 		}
 
 		if(data[0][0] == 3){
-			document.getElementById("btn0").disabled = false;
-			document.getElementById("btn1").disabled = false;
-			document.getElementById("btn2").disabled = false;
+			document.getElementById("btn0").removeAttribute("hidden");
+			document.getElementById("btn1").removeAttribute("hidden");
+			document.getElementById("btn2").removeAttribute("hidden");
 		}
 		
 	} catch (error) {
