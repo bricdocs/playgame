@@ -6,18 +6,21 @@ async function getJson() {
 	try {
 		const response = await fetch(Url);
 		const data = await response.json();
+
+		document.getElementById("btn0").innerHTML = data[0][0];
 		console.log(data);
+		console.log(data[0][0]);
 		
 		if(data[0][0] == 0){
 			document.getElementById("btn0").disabled = false;
 		}
 		
 		if(data[0][0] == 1){
-			document.getElementById("btn0").disabled = false;
+			document.getElementById("btn1").disabled = false;
 		}
 		
 		if(data[0][0] == 2){
-			document.getElementById("btn0").disabled = false;
+			document.getElementById("btn2").disabled = false;
 		}
 
 		if(data[0][0] == 3){
