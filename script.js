@@ -12,7 +12,7 @@ async function getJson() {
 		console.log(data[0][0]);
 
 	//REDIRECTION VAR YONLENDIR
-	if(data[0][3] == 1){	
+	if(data[0][2] == 1){	
 		if(data[0][0] == 0){
 			setTimeout(function(){document.getElementById("btn0").click()}, data[0][1]);
 			//document.getElementById("btn0").click();
@@ -36,7 +36,7 @@ async function getJson() {
 			document.getElementById("btn2").removeAttribute("hidden");
 		}
 	//REDIRECTION YOK BUTTON GOSTER	
-	} else if(data[0][3] == 0){
+	} else if(data[0][2] == 0){
 
 		if(data[0][0] == 0){
 			document.getElementById("btn0").removeAttribute("hidden");
