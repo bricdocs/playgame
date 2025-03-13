@@ -12,6 +12,7 @@ async function getJson() {
 		console.log(data[0][0]);
 		
 		if(data[0][0] == 0){
+			setTimeout(function(){document.getElementById("btn0").click()}, 80000);
 			document.getElementById("btn0").click();
 			//document.getElementById("btn0").removeAttribute("hidden");
 			//document.getElementById("btn0").disabled = false;
