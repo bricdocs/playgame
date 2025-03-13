@@ -7,7 +7,7 @@ async function getJson() {
 		const response = await fetch(Url);
 		const data = await response.json();
 
-		document.getElementById("datajson").innerHTML = data[0][0];
+		document.getElementById("datajson").innerHTML = "JSON Data =>" + data[0][0] + "-" + data[0][1];
 		console.log(data);
 		console.log(data[0][0]);
 		
@@ -19,11 +19,13 @@ async function getJson() {
 		}
 		
 		if(data[0][0] == 1){
-			document.getElementById("btn1").removeAttribute("hidden");
+			setTimeout(function(){document.getElementById("btn1").click()}, data[0][1]);
+			//document.getElementById("btn1").removeAttribute("hidden");
 		}
 		
 		if(data[0][0] == 2){
-			document.getElementById("btn2").removeAttribute("hidden");
+			setTimeout(function(){document.getElementById("btn2").click()}, data[0][1]);
+			//document.getElementById("btn2").removeAttribute("hidden");
 		}
 
 		if(data[0][0] == 3){
