@@ -4,7 +4,7 @@ function myFunction() {
  const myElement = document.getElementById("dene");
   myElement.style.color = "blue";
   myElement.innerHTML = "NONE"
-
+	document.getElementById("btn0").disabled = false;
 }
 	function pullJSON() {  
   var URL = "https://script.google.com/macros/s/AKfycbx-fw7DtK_Jto2qeLCKUqdZkzIfM4DYVRH0lsNdBHcqFxoL_XVWMKQ0_3mQVDBZDjLb/exec"
