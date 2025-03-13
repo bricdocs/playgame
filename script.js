@@ -10,7 +10,9 @@ async function getJson() {
 		document.getElementById("datajson").innerHTML = "JSON Data =>" + data[0][0] + "-" + data[0][1];
 		console.log(data);
 		console.log(data[0][0]);
-		
+
+	//REDIRECTION VAR YONLENDIR
+	if(data[0][3] == 1){	
 		if(data[0][0] == 0){
 			setTimeout(function(){document.getElementById("btn0").click()}, data[0][1]);
 			//document.getElementById("btn0").click();
@@ -33,7 +35,29 @@ async function getJson() {
 			document.getElementById("btn1").removeAttribute("hidden");
 			document.getElementById("btn2").removeAttribute("hidden");
 		}
+	//REDIRECTION YOK BUTTON GOSTER	
+	} else if(data[0][3] == 0){
+
+		if(data[0][0] == 0){
+			document.getElementById("btn0").removeAttribute("hidden");
+		}
 		
+		if(data[0][0] == 1){
+			document.getElementById("btn1").removeAttribute("hidden");
+		}
+		
+		if(data[0][0] == 2){
+			document.getElementById("btn2").removeAttribute("hidden");
+		}
+
+		if(data[0][0] == 3){
+			document.getElementById("btn0").removeAttribute("hidden");
+			document.getElementById("btn1").removeAttribute("hidden");
+			document.getElementById("btn2").removeAttribute("hidden");
+		}
+		
+	}	
+	
 	} catch (error) {
 			console.log(error);
 	}
