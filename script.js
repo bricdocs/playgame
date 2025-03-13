@@ -1,4 +1,4 @@
-<script>
+
 function myFunction() {
   document.getElementById("demo").innerHTML = "I have changed!";
  const myElement = document.getElementById("dene");
@@ -6,4 +6,3 @@ function myFunction() {
   myElement.innerHTML = "NONE"
 
 }
-  </script>
