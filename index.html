@@ -15,25 +15,10 @@
 function pullJSON() {  
   var URL = "https://script.google.com/macros/s/AKfycbx-fw7DtK_Jto2qeLCKUqdZkzIfM4DYVRH0lsNdBHcqFxoL_XVWMKQ0_3mQVDBZDjLb/exec"
  var data = fetch(URL, {"contentType": "application/json"});
-  console.log(data);
+  //console.log(data);
+document.getElemetById("dene").innerHTML = data;
 }
 
-async function getData() {
-  const url = "https://script.google.com/macros/s/AKfycbx-fw7DtK_Jto2qeLCKUqdZkzIfM4DYVRH0lsNdBHcqFxoL_XVWMKQ0_3mQVDBZDjLb/exec";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-
-    const json = await response.json();
-    console.log(json);
-  } catch (error) {
-    console.error(error.message);
-  }
-}
-
-	
 //GO TO WEB APP (0)
 function goWebApp(){
 	window.location.replace(
