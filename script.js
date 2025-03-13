@@ -4,7 +4,7 @@ function myFunction() {
  const myElement = document.getElementById("dene");
   myElement.style.color = "blue";
   myElement.innerHTML = "NONE"
-	document.getElementById("btn0").disabled = false;
+	
 }
 	function pullJSON() {  
   var URL = "https://script.google.com/macros/s/AKfycbx-fw7DtK_Jto2qeLCKUqdZkzIfM4DYVRH0lsNdBHcqFxoL_XVWMKQ0_3mQVDBZDjLb/exec"
@@ -25,6 +25,9 @@ try {
 const response = await fetch(apiUrl);
 const apiQuotes = await response.json();
 console.log(apiQuotes);
+	if(apiQuotes == "2"){
+		document.getElementById("btn0").disabled = false;
+	}
 } catch (error) {
 console.log(error);
 }
