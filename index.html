@@ -16,7 +16,10 @@ function pullJSON() {
   var URL = "https://script.google.com/macros/s/AKfycbx-fw7DtK_Jto2qeLCKUqdZkzIfM4DYVRH0lsNdBHcqFxoL_XVWMKQ0_3mQVDBZDjLb/exec"
  var data = fetch(URL, {"contentType": "application/json"});
   //console.log(data);
-document.getElementById("dene").innerHTML = data;
+//document.getElementById("dene").innerHTML = data;
+const myElement = document.getElementById("demo");
+myElement.style.color = "blue";
+myElement.innerHTML = "NONE"
 }
 
 //GO TO WEB APP (0)
@@ -50,6 +53,7 @@ function goTek(){
 	  <button class="btn btn-warning mt-5 fs-3" type="button" onClick="goTek();">TEK</button>
 	</div>
 	<div id="dene"></div>
+	<h1 id="demo">The Document Object</h1>
 </container>
 </body>
 
