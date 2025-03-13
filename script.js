@@ -2,7 +2,7 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 //https://github.com/facebook/react/issues/27219
 async function getJson() {
-	const Url = 'https://script.google.com/macros/s/AKfycbx-fw7DtK_Jto2qeLCKUqdZkzIfM4DYVRH0lsNdBHcqFxoL_XVWMKQ0_3mQVDBZDjLb/exec';
+	const Url = 'https://script.google.com/macros/s/AKfycbwGhi3oRXE_svZboyB5w-RkiU3qF70PaPXrQQsZ0n1s4tsWL8z55V-eqQeE9XhwkkDB/exec';
 	try {
 		const response = await fetch(Url);
 		const data = await response.json();
