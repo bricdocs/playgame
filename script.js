@@ -7,7 +7,8 @@ async function getJson() {
 		const response = await fetch(Url);
 		const data = await response.json();
 
-		document.getElementById("datajson").innerHTML = "JSON Data =>" + data[0][0] + "-" + data[0][1] + "-" + data[0][2];
+		//document.getElementById("datajson").innerHTML = "JSON Data =>" + data[0][0] + "-" + data[0][1] + "-" + data[0][2];
+		document.getElementById("datajson").innerHTML = data[0][0] + "-" + data[0][1] + "-" + data[0][2];
 		console.log(data);
 		console.log(data[0][0]);
 
