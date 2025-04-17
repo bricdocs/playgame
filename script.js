@@ -68,5 +68,5 @@ async function getJson() {
 //goNoAddOn();
 
 //setTimeout(function(){document.getElementById("btn1").click()}, 2000);
-setTimeout(goNoAddOn, 2000);
+setTimeout(goNoAddOn, 1000);
 
