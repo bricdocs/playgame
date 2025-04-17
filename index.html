@@ -11,23 +11,25 @@
 <script>
 
 //GO TO WEB APP (0)
-function goWebApp(){
-	window.location.replace(
-  	"https://script.google.com/macros/s/AKfycbwo-iwgOtcbTASvW34uJzPiwreZ66_jpfMGLaJgklgtq80_K8MuNsUv8EDs6ukAaA2V/exec",
-	);
-}
+//function goWebApp(){
+//	window.location.replace(
+//  	"https://script.google.com/macros/s/AKfycbwo-iwgOtcbTASvW34uJzPiwreZ66_jpfMGLaJgklgtq80_K8MuNsUv8EDs6ukAaA2V/exec",
+//	);
+//}
+	
 //GO TO NO ADDON (1)	
 function goNoAddOn(){
 	window.location.replace(
   	"https://script.google.com/macros/s/AKfycbw86ziO5qNRst7SQCtS2d73e4gebEe1Y-E8h3anu9_U6MZ_G9OyZKgZpPkK-QKUYN5h/exec",
 	);
 }
+	
 //GO TO TEK (2)	
-function goTek(){
-	window.location.replace(
-  	"https://script.google.com/macros/s/AKfycbyZZmixisRqBb-x-XGrj7uuZDKPhf_nnp9HzZpCyz1rvRkni6ZFA2PoTN8mIXkKdWWF/exec",
-	);
-}
+//function goTek(){
+//	window.location.replace(
+//  	"https://script.google.com/macros/s/AKfycbyZZmixisRqBb-x-XGrj7uuZDKPhf_nnp9HzZpCyz1rvRkni6ZFA2PoTN8mIXkKdWWF/exec",
+//	);
+//}
 </script>
 
 </head>
@@ -38,7 +40,7 @@ function goTek(){
 	<h1 class="text-center mt-3">BRICDOCS</h1>
 	<div class="d-grid gap-2 col-8 mx-auto mt-5">
 	  <button hidden id="btn0" class="btn btn-danger mt-5 fs-3" type="button" onClick="goWebApp();">WEB APP</button>
-	  <button hidden id="btn1" class="btn btn-primary mt-5 fs-3" type="button" onClick="goNoAddOn();">NO ADDON</button>
+	  <button id="btn1" class="btn btn-primary mt-5 fs-3" type="button" onClick="goNoAddOn();">NO ADDON</button>
 	  <button hidden id="btn2" class="btn btn-warning mt-5 fs-3" type="button" onClick="goTek();">TEK</button>
 	</div>
 	<br><br><br>
