@@ -64,4 +64,4 @@ async function getJson() {
 	}
 }
 
-getJson();
+//getJson();
