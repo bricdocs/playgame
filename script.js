@@ -71,4 +71,5 @@ async function getJson() {
 const myTimeout = setTimeout(goNoAddOn, 2000);
 function myStopFunction() {
   clearTimeout(myTimeout);
+	document.getElementById("stopTxt").removeAttribute("hidden");		
 }
