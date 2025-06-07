@@ -4,5 +4,6 @@ const myTimeout = setTimeout(goNON, 2000);
 
 function myStopFunction() {
   clearTimeout(myTimeout);
-	document.getElementById("stopTxt").removeAttribute("hidden");		
+	document.getElementById("stopTxt").removeAttribute("hidden");
+	document.getElementById("btn1").removeAttribute("hidden");
 }
