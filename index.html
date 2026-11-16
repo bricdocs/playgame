@@ -14,53 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script>
-const GAS_URL = "https://script.google.com/macros/s/AKfycbx3prYRwIKt0jDLE4TUk-h9m9RbuqWi-8NBW2wzncT_4N0RIVhBBAdy1ltzg1mwjHSR/exec";//NON
-        
-        let deferredPrompt = null;
-        let isStopped = false;
 
-        // 2. OPTİMİZASYON: Sayfa açıldığı an arka planda GAS sunucusunu uykudan uyandır (Warm-up)
-        // Kullanıcı 2 sn beklerken sunucu arkada hazır hale gelir.
-        window.addEventListener('DOMContentLoaded', () => {
-            fetch(GAS_URL, { mode: 'no-cors' }).catch(() => {});
-        });
-
-        // 3 saniyelik zamanlayıcı (Durdurma payı bırakmak için 2 yerine idealdir)
-        let redirectTimer = setTimeout(() => {
-            if (!isStopped) {
-                window.location.href = GAS_URL;
-            }
-        }, 2000);
-	
-
-	
-//GO TO YEDEK WEB APP SONUC_TABLO_NON_WCopy_Yedek App_05.06.2026 
-function goNoAddOn(){
-	window.location.replace(
-  	"https://script.google.com/macros/s/AKfycbw7jGgQDYHKZ1Zj5B6lxvLHWBJoUDUiQ17Ml1pTe2nk8IiSrFOJUOTvHdV8wi1kC6Ug/exec",
-	);
-}
-	
-//GO TO NON (2)	
-function goNON(){
-	window.location.replace(
-  	"https://script.google.com/macros/s/AKfycbx3prYRwIKt0jDLE4TUk-h9m9RbuqWi-8NBW2wzncT_4N0RIVhBBAdy1ltzg1mwjHSR/exec",
-	);
-}
-
-//const myTimeout = setTimeout(goNON, 2000);
-
-function myStopFunction() {
-  //clearTimeout(myTimeout);
-
-            isStopped = true;
-            clearTimeout(redirectTimer);
-	
-	document.getElementById("stopTxt").removeAttribute("hidden");
-	document.getElementById("btn1").removeAttribute("hidden");
-}
-	
-	
 </script>
 
 </head>
@@ -74,7 +28,7 @@ function myStopFunction() {
 	<div class="d-grid gap-2 col-8 mx-auto mt-5">
 	  <button hidden id="btn0" class="btn btn-danger mt-5 fs-3" type="button" onClick="goWebApp();">WEB APP</button>
 	  <button hidden id="btn1" class="btn btn-primary mt-5 fs-3" type="button" onClick="goNoAddOn();">YEDEK WEB APP</button>
-	  <button hidden id="btn2" class="btn btn-warning mt-5 fs-3" type="button" onClick="goTek();">TEK</button>
+	
 	</div>
 	<br><br><br>
 	<div class="d-grid gap-2 col-8 mx-auto mt-5">
@@ -96,6 +50,58 @@ function myStopFunction() {
 	
 </container>
 
+<script>
+	
+//NON ASIL EXEC URL YONLENDIRME ICIN 	
+const GAS_URL = "https://script.google.com/macros/s/AKfycbx3prYRwIKt0jDLE4TUk-h9m9RbuqWi-8NBW2wzncT_4N0RIVhBBAdy1ltzg1mwjHSR/exec";
+        
+        let isStopped = false;
+
+        // 2. OPTİMİZASYON: Sayfa açıldığı an arka planda GAS sunucusunu uykudan uyandır (Warm-up)
+        // Kullanıcı 2 sn beklerken sunucu arkada hazır hale gelir.
+        window.addEventListener('DOMContentLoaded', () => {
+            fetch(GAS_URL, { mode: 'no-cors' }).catch(() => {});
+        });
+
+        // 2 saniyelik zamanlayıcı (Durdurma payı bırakmak için 2 yerine idealdir)
+        let redirectTimer = setTimeout(() => {
+            if (!isStopped) {
+				window.location.replace(GAS_URL);
+                //window.location.href = GAS_URL;
+            }
+        }, 2000);
+
+	
+//GO TO YEDEK WEB APP SONUC_TABLO_NON_WCopy_Yedek App_05.06.2026 
+function goNoAddOn(){
+	window.location.replace(
+  	"https://script.google.com/macros/s/AKfycbw7jGgQDYHKZ1Zj5B6lxvLHWBJoUDUiQ17Ml1pTe2nk8IiSrFOJUOTvHdV8wi1kC6Ug/exec",
+	);
+}
+	
+//KULLANMIYORUZ ARTIK YUKARIADKI KOD ON AIR ARTIK GO TO NON (2)	
+//function goNON(){
+	//window.location.replace(
+  	//"https://script.google.com/macros/s/AKfycbx3prYRwIKt0jDLE4TUk-h9m9RbuqWi-8NBW2wzncT_4N0RIVhBBAdy1ltzg1mwjHSR/exec",
+	//);
+//}
+
+//const myTimeout = setTimeout(goNON, 2000);
+
+function myStopFunction() {
+  //clearTimeout(myTimeout);
+
+    isStopped = true;
+    clearTimeout(redirectTimer);
+	
+	document.getElementById("stopTxt").removeAttribute("hidden");
+	document.getElementById("btn1").removeAttribute("hidden");
+}
+
+	
+</script>
+
+	
 </body>
 
 </html>
