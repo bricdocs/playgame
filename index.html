@@ -34,18 +34,9 @@ const GAS_URL = "https://script.google.com/macros/s/AKfycbx3prYRwIKt0jDLE4TUk-h9
         }, 2000);
 	
 
-
-	
-//GO TO WEB APP (0)
-//function goWebApp(){
-//	window.location.replace(
-//  	"https://script.google.com/macros/s/AKfycbwo-iwgOtcbTASvW34uJzPiwreZ66_jpfMGLaJgklgtq80_K8MuNsUv8EDs6ukAaA2V/exec",
-//	);
-//}
 	
 //GO TO YEDEK WEB APP SONUC_TABLO_NON_WCopy_Yedek App_05.06.2026 
 function goNoAddOn(){
-	//https://script.google.com/macros/s/AKfycbw86ziO5qNRst7SQCtS2d73e4gebEe1Y-E8h3anu9_U6MZ_G9OyZKgZpPkK-QKUYN5h/exec ESKI EXEC
 	window.location.replace(
   	"https://script.google.com/macros/s/AKfycbw7jGgQDYHKZ1Zj5B6lxvLHWBJoUDUiQ17Ml1pTe2nk8IiSrFOJUOTvHdV8wi1kC6Ug/exec",
 	);
@@ -57,6 +48,20 @@ function goNON(){
   	"https://script.google.com/macros/s/AKfycbx3prYRwIKt0jDLE4TUk-h9m9RbuqWi-8NBW2wzncT_4N0RIVhBBAdy1ltzg1mwjHSR/exec",
 	);
 }
+
+//const myTimeout = setTimeout(goNON, 2000);
+
+function myStopFunction() {
+  //clearTimeout(myTimeout);
+
+            isStopped = true;
+            clearTimeout(redirectTimer);
+	
+	document.getElementById("stopTxt").removeAttribute("hidden");
+	document.getElementById("btn1").removeAttribute("hidden");
+}
+	
+	
 </script>
 
 </head>
@@ -91,10 +96,7 @@ function goNON(){
 </center>
 	
 </container>
-<script>
 
-</script>
-<script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>
